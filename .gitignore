@@ -1,0 +1,6 @@
+.env
+.env
+node_modules
+website
+public
+docker-compose.yml
