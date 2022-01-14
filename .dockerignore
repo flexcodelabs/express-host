@@ -5,3 +5,4 @@ public
 docker-compose.yml
 .gitignore
 .git
+Dockerfile
