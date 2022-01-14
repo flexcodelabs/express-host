@@ -6,3 +6,6 @@ docker-compose.yml
 .gitignore
 .git
 Dockerfile
+docker
+.github
+.DS_Store

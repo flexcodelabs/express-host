@@ -15,7 +15,7 @@ app.use(router);
 app.use(express.static(path.join(__dirname, process.env.INSTANCES_HOME)));
 
 app.use((req, res, next) => {
-  res.sendFile(path.join(__dirname, "error.html"));
+  res.sendFile(path.join(__dirname, "fallback/error.html"));
 });
 
 server.listen(process.env.PORT || 3000, () => {
