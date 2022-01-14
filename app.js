@@ -14,6 +14,24 @@ app.use(router);
 
 app.use(express.static(path.join(__dirname, process.env.INSTANCES_HOME)));
 
+app.use("", (req, res, next) => {
+  res.sendFile(
+    path.join(
+      __dirname,
+      `${process.env.INSTANCES_HOME}/${process.env.DEFAULT_URL}/index.html`
+    )
+  );
+});
+
+app.use("/", (req, res, next) => {
+  res.sendFile(
+    path.join(
+      __dirname,
+      `${process.env.INSTANCES_HOME}/${process.env.DEFAULT_URL}/index.html`
+    )
+  );
+});
+
 app.use((req, res, next) => {
   res.sendFile(path.join(__dirname, "fallback/error.html"));
 });
